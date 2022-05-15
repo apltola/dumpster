@@ -3,7 +3,7 @@ name: 'produce trash 🗑️'
 # Run every hour on the hour
 on:
   schedule:
-    - cron: '40 * * * *'
+    - cron: '41 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
         run: |
           git config --local user.email "aleksijaakkojuhani@gmail.com"
           git config --local user.name "Aleksi Peltola"
-          ndoe makeCommits.js
+          node makeCommits.js
       - name: 'Push changes'
         uses: ad-m/github-push-action@v0.6.0
         with:
