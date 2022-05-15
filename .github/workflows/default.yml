@@ -3,7 +3,7 @@ name: 'produce trash 🗑️'
 # Run every hour on the hour
 on:
   schedule:
-    - cron: '38 * * * *'
+    - cron: '40 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
         with:
-          ref: trunk
+          ref: master
           persist-credentials: false
           fetch-depth: 0
       - name: 'Set up Node'
@@ -29,4 +29,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           force: 'true'
-          branch: 'trunk'
+          branch: 'master'
