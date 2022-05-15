@@ -3,7 +3,7 @@ name: 'produce trash 🗑️'
 # Run every hour on the hour
 on:
   schedule:
-    - cron: '36 * * * *'
+    - cron: '38 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       - name: 'Set up Node'
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 16
       - name: 'Make trash commits'
